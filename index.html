@@ -690,6 +690,316 @@
       background:var(--accent-soft);
       border-color:#d8e4f3;
     }
+
+    /* Dark mode — restrained enterprise palette */
+    .header-actions{
+      display:flex;
+      align-items:center;
+      gap:8px;
+      flex:0 0 auto;
+    }
+
+    .theme-toggle{
+      width:38px;
+      height:38px;
+      flex:0 0 auto;
+      display:grid;
+      place-items:center;
+      padding:0;
+      cursor:pointer;
+      color:#667085;
+      background:#ffffff;
+      border:1px solid var(--line);
+      border-radius:10px;
+      box-shadow:0 1px 3px rgba(16,24,40,.04);
+      transition:background .16s var(--ease), border-color .16s var(--ease), color .16s var(--ease);
+    }
+
+    .theme-toggle:hover{
+      color:#344054;
+      background:#f8fafc;
+      border-color:var(--line-strong);
+    }
+
+    .theme-toggle:focus-visible{
+      outline:3px solid rgba(35,75,120,.14);
+      outline-offset:2px;
+    }
+
+    .theme-icon{
+      width:17px;
+      height:17px;
+      stroke:currentColor;
+    }
+
+    .theme-icon-sun{ display:none; }
+
+    body.dark{
+      --bg:#161a20;
+      --surface:#20252c;
+      --surface-2:#252b33;
+      --text:#edf0f3;
+      --muted:#9aa4b2;
+      --line:#303740;
+      --line-strong:#3c4652;
+      --accent:#8fa9c4;
+      --accent-soft:#283441;
+      --shadow:0 8px 24px rgba(0,0,0,.16);
+    }
+
+    body.dark .appbar{
+      background:rgba(31,36,43,.96);
+      border-color:#303740;
+      box-shadow:0 8px 24px rgba(0,0,0,.16);
+    }
+
+    body.dark .brand-logo{
+      background:#ffffff;
+      border-radius:9px;
+      padding:2px 4px;
+    }
+
+    body.dark .brand-divider{
+      background:#343b45;
+    }
+
+    body.dark .brand-copy strong,
+    body.dark .section-title h2{
+      color:#eef1f4;
+    }
+
+    body.dark .brand-copy span,
+    body.dark .section-title p,
+    body.dark .section-meta,
+    body.dark .row-text span,
+    body.dark .external-head span,
+    body.dark .card-copy span,
+    body.dark .footnote{
+      color:#9aa4b2;
+    }
+
+    body.dark .tabs{
+      background:#191e24;
+      border-color:#303740;
+    }
+
+    body.dark .tab{
+      color:#98a2b3;
+    }
+
+    body.dark .tab:hover{
+      color:#eef1f4;
+    }
+
+    body.dark .tab.active{
+      color:#f5f7f9;
+      background:#2a3038;
+      box-shadow:none;
+    }
+
+    body.dark .theme-toggle{
+      color:#c0c7d0;
+      background:#252b33;
+      border-color:#343c46;
+      box-shadow:none;
+    }
+
+    body.dark .theme-toggle:hover{
+      color:#ffffff;
+      background:#2b323b;
+      border-color:#46515e;
+    }
+
+    body.dark .theme-icon-moon{ display:none; }
+    body.dark .theme-icon-sun{ display:block; }
+
+    body.dark .priority-card,
+    body.dark .external-card,
+    body.dark .list-panel{
+      background:#20252c;
+      border-color:#303740;
+      box-shadow:0 8px 22px rgba(0,0,0,.12);
+    }
+
+    body.dark .priority-card:hover,
+    body.dark .external-card:hover{
+      border-color:#414b57;
+      box-shadow:0 12px 28px rgba(0,0,0,.18);
+    }
+
+    body.dark .row{
+      border-color:#303740;
+    }
+
+    body.dark .row:hover{
+      background:#252b33;
+    }
+
+    body.dark .card-copy strong,
+    body.dark .row-text strong,
+    body.dark .external-head strong{
+      color:#edf0f3;
+    }
+
+    body.dark .icon,
+    body.dark .row-icon{
+      background:#262c34;
+      border-color:#353d47;
+    }
+
+    body.dark .icon svg,
+    body.dark .row-icon svg{
+      stroke:#b8c0ca;
+    }
+
+    body.dark .mini-link{
+      color:#d8dde4;
+      background:#252b33;
+      border-color:#343c46;
+    }
+
+    body.dark .mini-link:hover{
+      background:#2a313a;
+      border-color:#444e5b;
+    }
+
+    body.dark .disabled-link{
+      background:#22272e;
+      opacity:.55;
+    }
+
+    body.dark .external-arrow{
+      color:#a6b0bc;
+      background:#262c34;
+      border-color:#37404a;
+    }
+
+    body.dark .priority-card:hover .external-arrow,
+    body.dark .row:hover .external-arrow,
+    body.dark .mini-link:hover .external-arrow{
+      color:#d7e0ea;
+      background:#2d3742;
+      border-color:#43505d;
+    }
+
+    body.dark .company-label small{
+      color:#9aa4b2 !important;
+    }
+
+    body.dark .company-hjf{
+      color:#f08b82 !important;
+      background:#382322;
+      border-color:#5a302d;
+    }
+
+    body.dark .company-kps{
+      color:#8fb7ff !important;
+      background:#202d45;
+      border-color:#30466d;
+    }
+
+    body.dark .company-ost{
+      color:#e0a05a !important;
+      background:#36291c;
+      border-color:#59412a;
+    }
+
+    body.dark .tone-blue .icon-accent,
+    body.dark .tone-blue .row-icon{
+      background:#253247;
+      border-color:#334863;
+    }
+
+    body.dark .tone-blue .icon-accent svg,
+    body.dark .tone-blue .row-icon svg{
+      stroke:#8fb5df;
+    }
+
+    body.dark .tone-green .icon-accent,
+    body.dark .tone-green .row-icon{
+      background:#24352c;
+      border-color:#355043;
+    }
+
+    body.dark .tone-green .icon-accent svg,
+    body.dark .tone-green .row-icon svg{
+      stroke:#8bc49f;
+    }
+
+    body.dark .tone-amber .icon-accent,
+    body.dark .tone-amber .row-icon{
+      background:#382f22;
+      border-color:#55452e;
+    }
+
+    body.dark .tone-amber .icon-accent svg,
+    body.dark .tone-amber .row-icon svg{
+      stroke:#d7aa67;
+    }
+
+    body.dark .tone-indigo .icon-accent,
+    body.dark .tone-indigo .row-icon{
+      background:#2b2d42;
+      border-color:#41445f;
+    }
+
+    body.dark .tone-indigo .icon-accent svg,
+    body.dark .tone-indigo .row-icon svg{
+      stroke:#a6abe0;
+    }
+
+    body.dark .tone-violet .icon-accent,
+    body.dark .tone-violet .row-icon{
+      background:#332b3f;
+      border-color:#4b3e5c;
+    }
+
+    body.dark .tone-violet .icon-accent svg,
+    body.dark .tone-violet .row-icon svg{
+      stroke:#bea4d7;
+    }
+
+    body.dark .tone-teal .icon-accent,
+    body.dark .tone-teal .row-icon{
+      background:#223837;
+      border-color:#31514f;
+    }
+
+    body.dark .tone-teal .icon-accent svg,
+    body.dark .tone-teal .row-icon svg{
+      stroke:#8dc6c2;
+    }
+
+    body.dark .tone-rose .row-icon{
+      background:#39282d;
+      border-color:#553942;
+    }
+
+    body.dark .tone-rose .row-icon svg{
+      stroke:#d693a0;
+    }
+
+    body.dark .tone-slate .row-icon{
+      background:#292f36;
+      border-color:#3a424c;
+    }
+
+    body.dark .tone-slate .row-icon svg{
+      stroke:#abb4bf;
+    }
+
+    @media (max-width:640px){
+      .header-actions{ gap:6px; }
+      .theme-toggle{
+        width:34px;
+        height:34px;
+        border-radius:9px;
+      }
+      .theme-icon{
+        width:16px;
+        height:16px;
+      }
+    }
 </style>
 </head>
 <body>
@@ -705,11 +1015,16 @@
 <span>General Affair workspace</span>
 </div>
 </div>
-<div aria-label="Kategori link" class="tabs" role="tablist">
+
+<div class="header-actions"><div aria-label="Kategori link" class="tabs" role="tablist">
 <button aria-selected="true" class="tab active" data-view="internal" role="tab">Internal</button>
 <button aria-selected="false" class="tab" data-view="external" role="tab">External</button>
-</div>
-</header>
+</div><button aria-label="Ganti mode terang atau gelap" class="theme-toggle" id="themeToggle" title="Ganti tema" type="button"><svg aria-hidden="true" class="theme-icon theme-icon-moon" fill="none" stroke-width="1.8" viewbox="0 0 24 24">
+<path d="M20 15.5A8 8 0 0 1 8.5 4 8.2 8.2 0 1 0 20 15.5z"></path>
+</svg><svg aria-hidden="true" class="theme-icon theme-icon-sun" fill="none" stroke-width="1.8" viewbox="0 0 24 24">
+<circle cx="12" cy="12" r="3.5"></circle>
+<path d="M12 2.5v2M12 19.5v2M4.5 12h-2M21.5 12h-2M5.3 5.3 3.9 3.9M20.1 20.1l-1.4-1.4M18.7 5.3l1.4-1.4M3.9 20.1l1.4-1.4"></path>
+</svg></button></div></header>
 <section class="view active" id="internalView">
 <section class="section">
 <div class="section-head">
@@ -952,6 +1267,32 @@
         });
       });
     });
-  </script>
+  
+
+    const themeToggle = document.getElementById('themeToggle');
+
+    function applyTheme(theme){
+      const isDark = theme === 'dark';
+      document.body.classList.toggle('dark', isDark);
+      if (themeToggle) {
+        themeToggle.setAttribute('aria-pressed', String(isDark));
+        themeToggle.title = isDark ? 'Gunakan mode terang' : 'Gunakan mode gelap';
+      }
+      document.querySelector('meta[name="theme-color"]')
+        ?.setAttribute('content', isDark ? '#161a20' : '#f3f5f7');
+    }
+
+    const savedTheme = localStorage.getItem('ga-portal-theme');
+    const initialTheme = savedTheme ||
+      (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+
+    applyTheme(initialTheme);
+
+    themeToggle?.addEventListener('click', () => {
+      const nextTheme = document.body.classList.contains('dark') ? 'light' : 'dark';
+      localStorage.setItem('ga-portal-theme', nextTheme);
+      applyTheme(nextTheme);
+    });
+</script>
 </body>
 </html>
