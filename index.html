@@ -543,7 +543,154 @@
       line-height:1.2;
       white-space:normal;
     }
-    </style>
+    
+    /* Visual refinement v14 */
+    .priority-card,
+    .external-card,
+    .row{
+      position:relative;
+    }
+
+    .icon-accent{
+      border-color:transparent !important;
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,.45);
+    }
+
+    .tone-blue .icon-accent,
+    .tone-blue .row-icon{ background:#eef5ff; border-color:#d8e8ff; }
+    .tone-blue .icon-accent svg,
+    .tone-blue .row-icon svg{ stroke:#2f6fca; }
+
+    .tone-green .icon-accent,
+    .tone-green .row-icon{ background:#eef9f2; border-color:#d8efe0; }
+    .tone-green .icon-accent svg,
+    .tone-green .row-icon svg{ stroke:#2f7d4d; }
+
+    .tone-amber .icon-accent,
+    .tone-amber .row-icon{ background:#fff7e8; border-color:#f3e3bd; }
+    .tone-amber .icon-accent svg,
+    .tone-amber .row-icon svg{ stroke:#a66a19; }
+
+    .tone-indigo .icon-accent,
+    .tone-indigo .row-icon{ background:#f1f2ff; border-color:#dfe1ff; }
+    .tone-indigo .icon-accent svg,
+    .tone-indigo .row-icon svg{ stroke:#5661c7; }
+
+    .tone-violet .icon-accent,
+    .tone-violet .row-icon{ background:#f6f0ff; border-color:#e8dcfb; }
+    .tone-violet .icon-accent svg,
+    .tone-violet .row-icon svg{ stroke:#7b56b3; }
+
+    .tone-teal .icon-accent,
+    .tone-teal .row-icon{ background:#edf9f8; border-color:#d5efec; }
+    .tone-teal .icon-accent svg,
+    .tone-teal .row-icon svg{ stroke:#267e79; }
+
+    .tone-rose .row-icon{ background:#fff1f3; border-color:#f8dce1; }
+    .tone-rose .row-icon svg{ stroke:#b24f62; }
+
+    .tone-slate .row-icon{ background:#f3f5f8; border-color:#e1e5eb; }
+    .tone-slate .row-icon svg{ stroke:#667085; }
+
+    .priority-card::after,
+    .external-card::after{
+      content:"";
+      position:absolute;
+      left:0;
+      top:0;
+      width:100%;
+      height:3px;
+      opacity:0;
+      transform:scaleX(.35);
+      transform-origin:left;
+      transition:opacity .18s var(--ease), transform .18s var(--ease);
+      background:var(--accent);
+    }
+
+    .priority-card:hover::after,
+    .external-card:hover::after{
+      opacity:1;
+      transform:scaleX(1);
+    }
+
+    .tone-blue::after{ background:#3b82f6; }
+    .tone-green::after{ background:#3f9a61; }
+    .tone-amber::after{ background:#d08a25; }
+    .tone-indigo::after{ background:#6875d8; }
+    .tone-violet::after{ background:#8b66c2; }
+    .tone-teal::after{ background:#31928c; }
+
+    .external-card{
+      transition:transform .17s var(--ease), border-color .17s var(--ease), box-shadow .17s var(--ease);
+    }
+
+    .external-card:hover{
+      transform:translateY(-2px);
+      border-color:var(--line-strong);
+      box-shadow:0 12px 30px rgba(16,24,40,.07);
+    }
+
+    .company-code{
+      min-width:34px;
+      display:inline-flex !important;
+      align-items:center;
+      justify-content:center;
+      align-self:flex-start;
+      padding:3px 7px;
+      border-radius:6px;
+      font-size:11px !important;
+      line-height:1.2;
+      letter-spacing:.04em !important;
+      border:1px solid transparent;
+    }
+
+    .company-hjf{
+      color:#b42318 !important;
+      background:#fff1f0;
+      border-color:#f3c7c3;
+    }
+
+    .company-kps{
+      color:#175cd3 !important;
+      background:#eff4ff;
+      border-color:#c7d7fe;
+    }
+
+    .company-ost{
+      color:#9a4a0b !important;
+      background:#fff4e8;
+      border-color:#f2cfaa;
+    }
+
+    .company-label small{
+      margin-top:4px !important;
+      color:#7d8899 !important;
+    }
+
+    .mini-link{
+      min-height:49px;
+    }
+
+    .external-arrow{
+      width:25px;
+      height:25px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      flex:0 0 auto;
+      border-radius:7px;
+      background:#fff;
+      border:1px solid #e7ebf0;
+      font-size:13px;
+    }
+
+    .priority-card:hover .external-arrow,
+    .row:hover .external-arrow,
+    .mini-link:hover .external-arrow{
+      background:var(--accent-soft);
+      border-color:#d8e4f3;
+    }
+</style>
 </head>
 <body>
 <main class="shell">
@@ -573,13 +720,13 @@
 <span class="section-meta">3 link utama</span>
 </div>
 <div class="priority-grid">
-<a class="priority-card" href="https://gaskps.github.io/Mess-Karyawan/" rel="noopener" target="_blank">
+<a class="priority-card tone-blue" href="https://gaskps.github.io/Mess-Karyawan/" rel="noopener" target="_blank">
 <div class="card-top">
-<div class="icon">
-<svg fill="none" stroke-width="1.7" viewbox="0 0 24 24">
-<path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h6v6h-6z"></path>
-</svg>
-</div>
+<div class="icon icon-accent"><svg fill="none" stroke-width="1.8" viewbox="0 0 24 24">
+<path d="M4 20V8l8-4 8 4v12"></path>
+<path d="M9 20v-6h6v6"></path>
+<path d="M8 10h.01M12 10h.01M16 10h.01"></path>
+</svg></div>
 <span class="external-arrow">↗</span>
 </div>
 <div class="card-copy">
@@ -587,14 +734,15 @@
 <span>Cari data karyawan, blok, kamar, dan lokasi hunian</span>
 </div>
 </a>
-<a class="priority-card" href="https://docs.google.com/spreadsheets/d/1QESHA9uWnMowTXkJJB-AhYW9vaOdDkEwRs4W5qBdP-Y/edit?hl=id&amp;gid=0#gid=0" rel="noopener" target="_blank">
+<a class="priority-card tone-violet" href="https://docs.google.com/spreadsheets/d/1QESHA9uWnMowTXkJJB-AhYW9vaOdDkEwRs4W5qBdP-Y/edit?hl=id&amp;gid=0#gid=0" rel="noopener" target="_blank">
 <div class="card-top">
-<div class="icon">
-<svg fill="none" stroke-width="1.7" viewbox="0 0 24 24">
+<div class="icon icon-accent"><svg fill="none" stroke-width="1.8" viewbox="0 0 24 24">
 <path d="M7 3h7l4 4v14H7z"></path>
-<path d="M14 3v5h5M10 12h5M10 16h5"></path>
-</svg>
-</div>
+<path d="M14 3v5h5"></path>
+<path d="M10 13h4"></path>
+<path d="M10 17h5"></path>
+<path d="M5 13l-2 2 2 2"></path>
+</svg></div>
 <span class="external-arrow">↗</span>
 </div>
 <div class="card-copy">
@@ -602,14 +750,14 @@
 <span>Pantau proses dan status dokumen</span>
 </div>
 </a>
-<a class="priority-card" href="https://docs.google.com/spreadsheets/d/1buhruGKAZbiDmlLzqY8ztTTBFx0V9pWyLjy3NQMZii8/edit?resourcekey=&amp;gid=1607629557#gid=1607629557" rel="noopener" target="_blank">
+<a class="priority-card tone-amber" href="https://docs.google.com/spreadsheets/d/1buhruGKAZbiDmlLzqY8ztTTBFx0V9pWyLjy3NQMZii8/edit?resourcekey=&amp;gid=1607629557#gid=1607629557" rel="noopener" target="_blank">
 <div class="card-top">
-<div class="icon">
-<svg fill="none" stroke-width="1.7" viewbox="0 0 24 24">
-<path d="M4 8h16v10H4z"></path>
-<path d="M7 8V5h10v3M8 13h8"></path>
-</svg>
-</div>
+<div class="icon icon-accent"><svg fill="none" stroke-width="1.8" viewbox="0 0 24 24">
+<path d="M4 9h16v9H4z"></path>
+<path d="M7 9V6h10v3"></path>
+<path d="M8 13h8"></path>
+<path d="M9 18v2M15 18v2"></path>
+</svg></div>
 <span class="external-arrow">↗</span>
 </div>
 <div class="card-copy">
@@ -627,7 +775,7 @@
 </div>
 </div>
 <div class="list-panel">
-<a class="row" href="#" rel="noopener" target="_blank">
+<a class="row tone-slate" href="#" rel="noopener" target="_blank">
 <div class="row-left">
 <div class="row-icon">
 <svg fill="none" stroke-width="1.7" viewbox="0 0 24 24">
@@ -642,7 +790,7 @@
 </div>
 <span class="external-arrow">↗</span>
 </a>
-<a class="row" href="https://docs.google.com/spreadsheets/d/1atKGjEmiiZagJrmUji_2VHkXFqTa0em2PYLSxvZKif0/edit?pli=1&amp;gid=944968946#gid=944968946" rel="noopener" target="_blank">
+<a class="row tone-teal" href="https://docs.google.com/spreadsheets/d/1atKGjEmiiZagJrmUji_2VHkXFqTa0em2PYLSxvZKif0/edit?pli=1&amp;gid=944968946#gid=944968946" rel="noopener" target="_blank">
 <div class="row-left">
 <div class="row-icon">
 <svg fill="none" stroke-width="1.7" viewbox="0 0 24 24">
@@ -657,7 +805,7 @@
 </div>
 <span class="external-arrow">↗</span>
 </a>
-<a class="row" href="https://docs.google.com/spreadsheets/d/1qvsejxkpdGOqh7TBnpBNBO0Sk-kj1mY1UrVxoPtAlh4/edit?gid=1334089976#gid=1334089976" rel="noopener" target="_blank">
+<a class="row tone-rose" href="https://docs.google.com/spreadsheets/d/1qvsejxkpdGOqh7TBnpBNBO0Sk-kj1mY1UrVxoPtAlh4/edit?gid=1334089976#gid=1334089976" rel="noopener" target="_blank">
 <div class="row-left">
 <div class="row-icon">
 <svg fill="none" stroke-width="1.7" viewbox="0 0 24 24">
@@ -672,7 +820,7 @@
 </div>
 <span class="external-arrow">↗</span>
 </a>
-<a class="row" href="#" rel="noopener" target="_blank">
+<a class="row tone-indigo" href="#" rel="noopener" target="_blank">
 <div class="row-left">
 <div class="row-icon">
 <svg fill="none" stroke-width="1.7" viewbox="0 0 24 24">
@@ -699,91 +847,84 @@
 </div>
 </div>
 <div class="external-grid">
-<article class="external-card">
+<article class="external-card tone-blue">
 <div class="external-head">
-<div class="icon">
-<svg fill="none" stroke-width="1.7" viewbox="0 0 24 24">
+<div class="icon icon-accent"><svg fill="none" stroke-width="1.8" viewbox="0 0 24 24">
 <circle cx="12" cy="12" r="8"></circle>
 <path d="M12 7v5l3 2"></path>
-</svg>
-</div>
+<path d="M8 4.5 6.5 3M16 4.5 17.5 3"></path>
+</svg></div>
 <div>
 <strong>Input Absensi</strong>
 <span>Input dan kelola absensi karyawan</span>
 </div>
 </div>
-<a class="mini-link" href="https://docs.google.com/spreadsheets/d/1HrVY-KR3S9A1G4zyCACrNTi3CpVwv8lPA9aZRZpL44E/edit?pli=1&amp;gid=1823741062#gid=1823741062" rel="noopener" target="_blank"><span class="company-label"><strong>HJF</strong><small>PT Halmahera Jaya Feronikel</small></span><span class="external-arrow">↗</span></a><a class="mini-link" href="https://docs.google.com/spreadsheets/d/1hL4rqXfFQxqFT_lzia5JpREYb215LrwUWp6COXNwJsY/edit?gid=591963174#gid=591963174" rel="noopener" target="_blank"><span class="company-label"><strong>KPS</strong><small>PT Karunia Permai Sentosa</small></span><span class="external-arrow">↗</span></a><a class="mini-link" href="https://docs.google.com/spreadsheets/d/12jVB0EPW8ODIsLhLWCQOW6ojQIEK3gyz3tAGl1zzAkU/edit?gid=1489172358#gid=1489172358" rel="noopener" target="_blank"><span class="company-label"><strong>OST</strong><small>PT Obi Sinar Timur</small></span><span class="external-arrow">↗</span></a></article>
-<article class="external-card">
+<a class="mini-link" href="https://docs.google.com/spreadsheets/d/1HrVY-KR3S9A1G4zyCACrNTi3CpVwv8lPA9aZRZpL44E/edit?pli=1&amp;gid=1823741062#gid=1823741062" rel="noopener" target="_blank"><span class="company-label"><strong class="company-code company-hjf">HJF</strong><small>PT Halmahera Jaya Feronikel</small></span><span class="external-arrow">↗</span></a><a class="mini-link" href="https://docs.google.com/spreadsheets/d/1hL4rqXfFQxqFT_lzia5JpREYb215LrwUWp6COXNwJsY/edit?gid=591963174#gid=591963174" rel="noopener" target="_blank"><span class="company-label"><strong class="company-code company-kps">KPS</strong><small>PT Karunia Permai Sentosa</small></span><span class="external-arrow">↗</span></a><a class="mini-link" href="https://docs.google.com/spreadsheets/d/12jVB0EPW8ODIsLhLWCQOW6ojQIEK3gyz3tAGl1zzAkU/edit?gid=1489172358#gid=1489172358" rel="noopener" target="_blank"><span class="company-label"><strong class="company-code company-ost">OST</strong><small>PT Obi Sinar Timur</small></span><span class="external-arrow">↗</span></a></article>
+<article class="external-card tone-green">
 <div class="external-head">
-<div class="icon">
-<svg fill="none" stroke-width="1.7" viewbox="0 0 24 24">
+<div class="icon icon-accent"><svg fill="none" stroke-width="1.8" viewbox="0 0 24 24">
 <path d="M9 3h6v4h4v6h-4v4H9v-4H5V7h4z"></path>
-</svg>
-</div>
+<path d="M12 7v10M7 12h10"></path>
+</svg></div>
 <div>
 <strong>SKD Klinik</strong>
 <span>Surat keterangan dokter</span>
 </div>
 </div>
 <a class="mini-link" href="http://192.168.130.23/harita_clinic/" rel="noopener" target="_blank"><span>SKD Klinik</span><span class="external-arrow">↗</span></a><a class="mini-link" href="http://192.168.130.46/" rel="noopener" target="_blank"><span>Verifikasi SKD</span><span class="external-arrow">↗</span></a></article>
-<article class="external-card">
+<article class="external-card tone-amber">
 <div class="external-head">
-<div class="icon">
-<svg fill="none" stroke-width="1.7" viewbox="0 0 24 24">
+<div class="icon icon-accent"><svg fill="none" stroke-width="1.8" viewbox="0 0 24 24">
 <path d="M7 3h7l4 4v14H7z"></path>
 <path d="M14 3v5h5"></path>
 <path d="M9 12h6M9 16h4"></path>
-</svg>
-</div>
+<circle cx="17.5" cy="16.5" r="2.5"></circle>
+</svg></div>
 <div>
 <strong>Pengurusan Berkas 312</strong>
 <span>Agung Aribowo</span>
 </div>
 </div>
 <div aria-disabled="true" class="mini-link disabled-link"><span>Scan</span><span style="color:#98a2b3;font-weight:500;">Belum tersedia</span></div><a class="mini-link" href="https://docs.google.com/spreadsheets/d/1wv5Yfak-Ku7CLrwtTLYEOr1Lp-KtiMNLjFVL4GZsKCE/edit?gid=802609979#gid=802609979" rel="noopener" target="_blank"><span>Tracking Dokumen</span><span class="external-arrow">↗</span></a></article>
-<article class="external-card">
+<article class="external-card tone-indigo">
 <div class="external-head">
-<div class="icon">
-<svg fill="none" stroke-width="1.7" viewbox="0 0 24 24">
-<path d="M5 6h14v9H9l-4 4z"></path>
-<path d="M9 10h6"></path>
-</svg>
-</div>
+<div class="icon icon-accent"><svg fill="none" stroke-width="1.8" viewbox="0 0 24 24">
+<path d="M5 7h14v9H9l-4 4z"></path>
+<path d="M9 11h6"></path>
+<path d="M12 8.5v5"></path>
+</svg></div>
 <div>
 <strong>IT Help Desk</strong>
 <span>Tiket dan bantuan IT</span>
 </div>
 </div>
 <a class="mini-link" href="http://helpdesk.obi.com/" rel="noopener" target="_blank"><span>Buat Tiket IT</span><span class="external-arrow">↗</span></a></article>
-<article class="external-card">
+<article class="external-card tone-violet">
 <div class="external-head">
-<div class="icon">
-<svg fill="none" stroke-width="1.7" viewbox="0 0 24 24">
-<path d="M7 11V7a2 2 0 0 1 4 0v4"></path>
-<path d="M11 10V6a2 2 0 0 1 4 0v5"></path>
-<path d="M15 10V8a2 2 0 0 1 4 0v5c0 5-3 8-7 8h-1c-3 0-5-2-6-4l-2-4a2 2 0 0 1 3-2l1 1"></path>
-</svg>
-</div>
+<div class="icon icon-accent"><svg fill="none" stroke-width="1.8" viewbox="0 0 24 24">
+<path d="M8 4h8v4H8z"></path>
+<path d="M6 7h12v14H6z"></path>
+<path d="m9 14 2 2 4-4"></path>
+</svg></div>
 <div>
 <strong>Data Izin Tidak Finger</strong>
 <span>Data pengajuan dan approval tidak finger karyawan</span>
 </div>
 </div>
-<a class="mini-link" href="https://docs.google.com/spreadsheets/d/1NDYGCCB6EKoDyxUSZE8voHG3NA4zTJM7ciB077DP0ak/edit?gid=578650227#gid=578650227" rel="noopener" target="_blank"><span class="company-label"><strong>HJF</strong><small>PT Halmahera Jaya Feronikel</small></span><span class="external-arrow">↗</span></a><a class="mini-link" href="https://docs.google.com/spreadsheets/d/1TbQt_SXYLuC1GYlVYaSJSsyMKgFGXn2Dg8WLXsZJ44k/edit?gid=1811805796#gid=1811805796" rel="noopener" target="_blank"><span class="company-label"><strong>KPS</strong><small>PT Karunia Permai Sentosa</small></span><span class="external-arrow">↗</span></a><a class="mini-link" href="https://docs.google.com/spreadsheets/d/16IgIGMxaeFNwW8ShdMoQ9wPHxN8yzQmDDqRhHLR5rYk/edit?gid=1600932865#gid=1600932865" rel="noopener" target="_blank"><span class="company-label"><strong>OST</strong><small>PT Obi Sinar Timur</small></span><span class="external-arrow">↗</span></a></article>
-<article class="external-card">
+<a class="mini-link" href="https://docs.google.com/spreadsheets/d/1NDYGCCB6EKoDyxUSZE8voHG3NA4zTJM7ciB077DP0ak/edit?gid=578650227#gid=578650227" rel="noopener" target="_blank"><span class="company-label"><strong class="company-code company-hjf">HJF</strong><small>PT Halmahera Jaya Feronikel</small></span><span class="external-arrow">↗</span></a><a class="mini-link" href="https://docs.google.com/spreadsheets/d/1TbQt_SXYLuC1GYlVYaSJSsyMKgFGXn2Dg8WLXsZJ44k/edit?gid=1811805796#gid=1811805796" rel="noopener" target="_blank"><span class="company-label"><strong class="company-code company-kps">KPS</strong><small>PT Karunia Permai Sentosa</small></span><span class="external-arrow">↗</span></a><a class="mini-link" href="https://docs.google.com/spreadsheets/d/16IgIGMxaeFNwW8ShdMoQ9wPHxN8yzQmDDqRhHLR5rYk/edit?gid=1600932865#gid=1600932865" rel="noopener" target="_blank"><span class="company-label"><strong class="company-code company-ost">OST</strong><small>PT Obi Sinar Timur</small></span><span class="external-arrow">↗</span></a></article>
+<article class="external-card tone-teal">
 <div class="external-head">
-<div class="icon">
-<svg fill="none" stroke-width="1.7" viewbox="0 0 24 24">
-<path d="M5 19V9M12 19V5M19 19v-7"></path>
-<path d="M3 19h18"></path>
-</svg>
-</div>
+<div class="icon icon-accent"><svg fill="none" stroke-width="1.8" viewbox="0 0 24 24">
+<rect height="14" rx="2" width="16" x="4" y="5"></rect>
+<path d="M8 3v4M16 3v4M4 9h16"></path>
+<path d="M8 13h3M8 16h5"></path>
+</svg></div>
 <div>
 <strong>Data Pembayaran Cuti On Site</strong>
 <span>Data pembayaran cuti on site</span>
 </div>
 </div>
-<a class="mini-link" href="https://docs.google.com/spreadsheets/d/1Z3ZwrcVtO6r1lXjq0LJ7bfpgjDuZ31H42ZaR6pP3-KI/edit?gid=840365002#gid=840365002" rel="noopener" target="_blank"><span class="company-label"><strong>HJF</strong><small>PT Halmahera Jaya Feronikel</small></span><span class="external-arrow">↗</span></a><a class="mini-link" href="https://docs.google.com/spreadsheets/d/1e4D6sMx--I4Hb35WQpvIRdNlfArXRuAJRZkjEtoUdmI/edit?gid=0#gid=0" rel="noopener" target="_blank"><span class="company-label"><strong>KPS</strong><small>PT Karunia Permai Sentosa</small></span><span class="external-arrow">↗</span></a><a class="mini-link" href="https://docs.google.com/spreadsheets/d/1IwLtRCCd71m_d1eLlpZ9SOdw-y1xylfBMzHwbz4_hJo/edit?gid=840365002#gid=840365002" rel="noopener" target="_blank"><span class="company-label"><strong>OST</strong><small>PT Obi Sinar Timur</small></span><span class="external-arrow">↗</span></a></article>
+<a class="mini-link" href="https://docs.google.com/spreadsheets/d/1Z3ZwrcVtO6r1lXjq0LJ7bfpgjDuZ31H42ZaR6pP3-KI/edit?gid=840365002#gid=840365002" rel="noopener" target="_blank"><span class="company-label"><strong class="company-code company-hjf">HJF</strong><small>PT Halmahera Jaya Feronikel</small></span><span class="external-arrow">↗</span></a><a class="mini-link" href="https://docs.google.com/spreadsheets/d/1e4D6sMx--I4Hb35WQpvIRdNlfArXRuAJRZkjEtoUdmI/edit?gid=0#gid=0" rel="noopener" target="_blank"><span class="company-label"><strong class="company-code company-kps">KPS</strong><small>PT Karunia Permai Sentosa</small></span><span class="external-arrow">↗</span></a><a class="mini-link" href="https://docs.google.com/spreadsheets/d/1IwLtRCCd71m_d1eLlpZ9SOdw-y1xylfBMzHwbz4_hJo/edit?gid=840365002#gid=840365002" rel="noopener" target="_blank"><span class="company-label"><strong class="company-code company-ost">OST</strong><small>PT Obi Sinar Timur</small></span><span class="external-arrow">↗</span></a></article>
 </div>
 </section>
 </section>
