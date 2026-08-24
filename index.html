@@ -1000,6 +1000,105 @@
         height:16px;
       }
     }
+
+    /* IT Help Desk grouped actions */
+    .it-helpdesk-card{
+      grid-column:span 2;
+    }
+
+    .it-group{
+      margin-top:12px;
+      padding-top:12px;
+      border-top:1px solid var(--line);
+    }
+
+    .it-group-title{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+      margin-bottom:8px;
+    }
+
+    .it-group-title small{
+      color:#98a2b3;
+      font-size:10px;
+      font-weight:500;
+    }
+
+    .it-group-badge{
+      display:inline-flex;
+      align-items:center;
+      min-height:24px;
+      padding:4px 8px;
+      border-radius:7px;
+      font-size:10.5px;
+      font-weight:750;
+      letter-spacing:.02em;
+      border:1px solid var(--line);
+    }
+
+    .it-group-badge.powerplus{
+      color:#175cd3;
+      background:#eff4ff;
+      border-color:#c7d7fe;
+    }
+
+    .it-group-badge.wifi{
+      color:#344054;
+      background:#f2f4f7;
+      border-color:#d0d5dd;
+    }
+
+    .it-group-actions{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:7px;
+    }
+
+    .it-group-actions .mini-link{
+      margin-top:0;
+      min-height:46px;
+    }
+
+    .link-status{
+      color:#98a2b3;
+      font-size:9.5px;
+      font-weight:500;
+    }
+
+    body.dark .it-group{
+      border-color:#303740;
+    }
+
+    body.dark .it-group-title small{
+      color:#8f99a7;
+    }
+
+    body.dark .it-group-badge.powerplus{
+      color:#8fb7ff;
+      background:#202d45;
+      border-color:#30466d;
+    }
+
+    body.dark .it-group-badge.wifi{
+      color:#c6ced8;
+      background:#282e35;
+      border-color:#3a424c;
+    }
+
+    body.dark .link-status{
+      color:#7f8a98;
+    }
+
+    @media (max-width:900px){
+      .it-helpdesk-card{grid-column:span 2;}
+    }
+
+    @media (max-width:640px){
+      .it-helpdesk-card{grid-column:span 1;}
+      .it-group-actions{grid-template-columns:1fr;}
+    }
 </style>
 </head>
 <body>
@@ -1200,7 +1299,7 @@
 </div>
 </div>
 <a class="mini-link" href="https://forms.gle/tvKG6TmUNAmMyr6j6" rel="noopener" target="_blank"><span>Register</span><span class="external-arrow">↗</span></a><a class="mini-link" href="https://docs.google.com/spreadsheets/d/1wv5Yfak-Ku7CLrwtTLYEOr1Lp-KtiMNLjFVL4GZsKCE/edit?gid=802609979#gid=802609979" rel="noopener" target="_blank"><span>Tracking Dokumen</span><span class="external-arrow">↗</span></a></article>
-<article class="external-card tone-indigo">
+<article class="external-card tone-indigo it-helpdesk-card">
 <div class="external-head">
 <div class="icon icon-accent"><svg fill="none" stroke-width="1.8" viewbox="0 0 24 24">
 <path d="M5 7h14v9H9l-4 4z"></path>
@@ -1209,10 +1308,10 @@
 </svg></div>
 <div>
 <strong>IT Help Desk</strong>
-<span>Tiket dan bantuan IT</span>
+<span>Bantuan IT dan reset akses</span>
 </div>
 </div>
-<a class="mini-link" href="http://helpdesk.obi.com/" rel="noopener" target="_blank"><span>Buat Tiket IT</span><span class="external-arrow">↗</span></a></article>
+<a class="mini-link" href="http://helpdesk.obi.com/" rel="noopener" target="_blank"><span>Buat Tiket IT</span><span class="external-arrow">↗</span></a><div class="it-group"><div class="it-group-title"><span class="it-group-badge powerplus">Power Plus</span><small>Reset akses</small></div><div class="it-group-actions"><a class="mini-link" href="https://harita.powerplus10.com/Default.aspx" rel="noopener" target="_blank"><span>Reset Password</span><span class="external-arrow">↗</span></a><a class="mini-link" href="https://drive.google.com/file/d/1swBM9GYKXY38oS1oswyxPpkPBTSuyDwg/view?usp=drive_link" rel="noopener" target="_blank"><span>Tutorial</span><span class="external-arrow">↗</span></a></div></div><div class="it-group"><div class="it-group-title"><span class="it-group-badge wifi">WiFi</span><small>Reset akses</small></div><div class="it-group-actions"><a class="mini-link" href="https://iam.lygend.com:10086/snackbar/package/portal/selfcareforgetpassword/index.html?n=3" rel="noopener" target="_blank"><span>Reset Password</span><span class="external-arrow">↗</span></a><a class="mini-link" href="https://drive.google.com/file/d/1AkGFw2jV3pNnN0UDkd5IHbvg85amI39E/view?usp=drive_link" rel="noopener" target="_blank"><span>Tutorial</span><span class="external-arrow">↗</span></a></div></div></article>
 <article class="external-card tone-violet">
 <div class="external-head">
 <div class="icon icon-accent"><svg fill="none" stroke-width="1.8" viewbox="0 0 24 24">
