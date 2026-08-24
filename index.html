@@ -1003,7 +1003,7 @@
 
     /* IT Help Desk grouped actions */
     .it-helpdesk-card{
-      grid-column:span 2;
+      grid-column:span 1;
     }
 
     .it-group{
@@ -1092,13 +1092,38 @@
     }
 
     @media (max-width:900px){
-      .it-helpdesk-card{grid-column:span 2;}
+      .it-helpdesk-card{grid-column:span 1;}
     }
 
     @media (max-width:640px){
       .it-helpdesk-card{grid-column:span 1;}
       .it-group-actions{grid-template-columns:1fr;}
     }
+
+    .it-helpdesk-card .it-group{
+      margin-top:9px;
+      padding-top:9px;
+    }
+
+    .it-helpdesk-card .it-group-title{
+      margin-bottom:6px;
+    }
+
+    .it-helpdesk-card .it-group-actions{
+      gap:5px;
+    }
+
+    .it-helpdesk-card .it-group-actions .mini-link{
+      min-height:40px;
+      padding:8px 9px;
+      font-size:11.5px;
+    }
+
+    .it-helpdesk-card > .mini-link{
+      min-height:42px;
+      padding:8px 10px;
+    }
+
 </style>
 </head>
 <body>
